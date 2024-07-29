@@ -1,4 +1,4 @@
-# Downloader (and soon to be installer) script
+# Downloader (and soon to be installer) script - Mozilla verison (currently)
 
 
 I originally created this script in order to automatize and make the downloading & installing of mods for my Star Wars games less tricky and less "intensive" (having to go to each of the webpages,
