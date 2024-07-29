@@ -11,8 +11,8 @@ import zipfile
 from io import BytesIO
 import urllib.parse
 
-file_path = "D:\\Programming\\Python\\projects\\download-links.txt"
-save_path = "D:\\Programming\\Python\\projects\\Mods"
+file_path = "" # source where links are being read from
+save_path = "" # destination to where files should be saved
 
 class FileReader:
     def __init__(self, file_path):
@@ -33,7 +33,7 @@ class Download:
     def __init__(self, links, save_path):
         self.links = links
         self.save_path = save_path
-        self.archive_path = os.path.join(self.save_path, "downloaded_files.zip")
+        self.archive_path = os.path.join(self.save_path, "downloaded_files.zip") # placeholder
         
         print(f"\nReading from {file_path}")
         print(f"Download process started; files will be archived to {self.archive_path}\n")
@@ -141,7 +141,7 @@ class Download:
             f.write(zip_buffer.getvalue())
         
         print(f"\nDownload process finished successfully.")
-        print(f"All files have been archived to: {self.archive_path}\n)
+        print(f"All files have been archived to: {self.archive_path}\n")
 
 
 def main():
