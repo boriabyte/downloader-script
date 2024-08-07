@@ -11,8 +11,8 @@ import zipfile
 from io import BytesIO
 import urllib.parse
 
-file_path = "" # source where links are being read from
-save_path = "" # destination to where files should be saved
+file_path = r""
+save_path = r""
 
 class FileReader:
     def __init__(self, file_path):
@@ -133,15 +133,15 @@ class Download:
                     print(f"Error occurred trying to download from URL [{index}] {link}: {e}. Download halted.")
                 index += 1
 
-        # close conn
-        driver.quit()
-
         # Save the zip archive to disk
         with open(self.archive_path, 'wb') as f:
             f.write(zip_buffer.getvalue())
         
         print(f"\nDownload process finished successfully.")
         print(f"All files have been archived to: {self.archive_path}\n")
+        
+        # close conn
+        driver.quit()
 
 
 def main():
